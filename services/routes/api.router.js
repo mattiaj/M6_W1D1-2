@@ -3,19 +3,19 @@ import User from "../model/user.model.js"
 
 export const apiRoute = Router();
 
-apiRoute.get("/", async (req, res) => {
-    res.send("sei al route principale")
+apiRoute.get("/authors", async (req, res) => {
+
 })
 
-apiRoute.get("/:id", async (res, req) => {
+apiRoute.get("/authors/:id", async (req, res) => {
     
 })
 
-apiRoute.post("/", async (res, req, next) => {
+apiRoute.post("/authors", async (req, res, next) => {
     try {
-        let user = await User.create(req.body);
-        res.send(user).status(400);
-    } catch (error) {
-        next(error)
+      let user = await User.create(req.body);
+      res.send(user).status(400);
+    } catch (err) {
+      next(err);
     }
-})
+  });

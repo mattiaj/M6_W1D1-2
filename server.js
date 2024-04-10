@@ -10,13 +10,13 @@ const app = express();
 app.use(express.json());
 
 
+app.use("/", apiRoute);
 
 
 const initServer = async () => {
     try {
         await mongoose.connect(process.env.MONGO_URL);
-        app.use("/authors", apiRoute);
-
+        
         app.listen(process.env.PORT, () => {
             console.log(`Il server è collegato alla porta ${process.env.PORT}`)
         })

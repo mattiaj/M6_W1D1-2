@@ -5,27 +5,27 @@ const userSchema = new Schema(
     {
         nome: {
             type: String,
-            required: true
+            required: true,
         },
 
         cognome: {
             type: String,
-            required: true
+            required: true,
         },
 
         email: {
             type: String,
-            required: true
+            required: true,
         },
 
         data_di_nascita: {
             type: String,
-            required: true
+            required: true,
         },
 
         avatar: {
             type: String,
-            required: true
+            required: true,
         }
 
     },
